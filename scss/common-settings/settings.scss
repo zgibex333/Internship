@@ -1,20 +1,22 @@
+@import "../vars/mixins.scss";
+
 .text-accent {
   color: $accent-c;
 }
 
 .button {
   color: $white-c;
-  width: 150px;
-  height: 50px;
+  width: size(150);
+  height: size(50);
   font-size: $navSize;
-  box-shadow: 0px 1px 10px $accent-c;
+  box-shadow: 0 size(1) size(10) $accent-c;
   background: $accent-c;
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: size(5);
   font-weight: 500;
   cursor: pointer;
   &:hover {
-    box-shadow: 0px 1px 10px $dark1-c;
+    box-shadow: 0 size(1) size(10) $dark1-c;
   }
 }

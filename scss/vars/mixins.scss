@@ -7,12 +7,15 @@
   &:link {
     color: $color1;
   }
+
   &:visited {
     color: $color1;
   }
+
   &:hover {
     color: $color2;
   }
+
   &:active {
     color: $color2;
   }
@@ -34,6 +37,7 @@
     width: 100%;
     padding-top: ($height / $width) * 100%;
   }
+
   & > .content {
     position: absolute;
     top: 0;
