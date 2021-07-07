@@ -1,0 +1,204 @@
+@import "../vars/vars.scss";
+@import "../vars/mixins.scss";
+@import "../common-settings/settings.scss";
+
+.container {
+  max-width: $containerDesktop;
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+  font-family: $workSans;
+
+  button {
+    font-family: inherit;
+  }
+
+  a {
+    @include linksColor($white-c, $accent-c);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.header {
+  padding: size(26) size(15);
+  width: 100%;
+  position: absolute;
+  background: $primary-c;
+  overflow: hidden;
+  font-size: $navSize;
+  z-index: 999;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.burger {
+  display: none;
+}
+
+.menu__logo {
+  min-width: size(162);
+  height: size(48);
+  margin: 0 size(10) 0 size(5);
+  position: relative;
+  background: url("../../assets/header/logo.svg") bottom / contain no-repeat;
+}
+
+.menu__nav {
+  display: flex;
+  flex-grow: 1;
+  max-width: size(935);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  flex-grow: 1;
+  max-width: size(692);
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__item {
+  flex: 0 0 auto;
+}
+
+.menu__button {
+  height: size(24);
+  width: size(24);
+  margin: 0 size(5) 0 size(10);
+
+  svg {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    &:hover {
+      path {
+        fill: $accent-c;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .container {
+    max-width: $containerTablet;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding: size(27) size(15) size(28);
+  }
+
+  .menu {
+    font-size: $regularSize;
+  }
+
+  .menu__logo {
+    min-width: size(83);
+    height: size(25);
+    margin-right: size(15);
+    position: relative;
+    background: url("../../assets/header/logo.svg") center / contain no-repeat;
+  }
+
+  .menu__nav {
+    max-width: size(579);
+  }
+
+  .menu__list {
+    max-width: size(526);
+  }
+
+  .menu__button {
+    margin-left: size(10);
+  }
+}
+
+@media (max-width: size(720)) {
+  .menu__logo {
+    min-width: size(100);
+  }
+
+  .menu {
+    font-size: size(12);
+  }
+
+  .menu__nav {
+    max-width: size(450);
+    padding-left: size(95);
+  }
+
+  .menu__list {
+    display: none;
+  }
+
+  .burger {
+    width: size(18);
+    height: size(16);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    &__line {
+      height: size(2);
+      background: $white-c;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .container {
+    max-width: $containerMobile;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding: size(9) size(15) size(10) size(15);
+  }
+
+  .menu__logo {
+    min-width: size(102);
+    height: size(31);
+    position: relative;
+    background: url("../../assets/header/logo-mobile.svg") bottom / contain
+      no-repeat;
+  }
+
+  .menu__button {
+    margin: 0;
+  }
+
+  .menu__nav {
+    max-width: size(183);
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .menu__list {
+    display: none;
+  }
+
+  .burger {
+    width: size(18);
+    height: size(16);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    &__line {
+      height: size(2);
+      width: 100%;
+      background: $white-c;
+    }
+  }
+}

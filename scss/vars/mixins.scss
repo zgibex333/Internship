@@ -1,0 +1,48 @@
+@function size($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+
+@mixin linksColor($color1, $color2) {
+  text-decoration: none;
+  &:link {
+    color: $color1;
+  }
+
+  &:visited {
+    color: $color1;
+  }
+
+  &:hover {
+    color: $color2;
+  }
+
+  &:active {
+    color: $color2;
+  }
+}
+
+@mixin cursorPointer() {
+  cursor: pointer;
+}
+
+@mixin circleShadow($color) {
+  box-shadow: size(4) size(5) size(15) $color;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  & > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
