@@ -126,8 +126,13 @@ body {
     }
   }
 
+  .hero-right {
+    flex: 1 0 size(200);
+    max-width: none;
+  }
+
   .hero-left {
-    flex: 1 0 size(335);
+    flex: 1 0 size(200);
     max-width: none;
     text-align: center;
     padding-top: size(50);

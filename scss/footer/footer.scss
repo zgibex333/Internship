@@ -360,7 +360,8 @@ footer {
 
   .subscribe {
     color: $white-c;
-    width: size(262);
+    flex-grow: 1;
+    max-width: size(262);
     font-weight: normal;
     font-size: $regularSize;
     line-height: size(24);
@@ -374,7 +375,7 @@ footer {
     border: none;
     background: #ff5300;
     position: relative;
-    
+
     &::before {
       position: absolute;
       content: "";

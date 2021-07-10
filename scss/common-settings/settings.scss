@@ -23,3 +23,47 @@
     box-shadow: 0 size(1) size(10) $accent-c;
   }
 }
+
+.borders {
+  padding-top: size(120);
+}
+
+.pre-title {
+  font-weight: 400;
+  font-size: $regularSize;
+  line-height: size(24);
+  margin-bottom: size(25);
+}
+
+.title {
+  font-weight: 600;
+  font-size: $heading;
+  line-height: size(48);
+}
+
+.paragrapgh {
+  font-size: $regularSize;
+  line-height: size(24);
+  font-weight: 400;
+  line-height: size(24);
+}
+
+@media (max-width: $tablet) {
+  .pre-title {
+    margin-bottom: size(18);
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: $mobileTitle;
+    line-height: size(39);
+  }
+}
+
+@media (max-width: $mobile) {
+  .title {
+    font-weight: 500;
+    font-size: $mobileHeading;
+    line-height: size(31);
+  }
+}
