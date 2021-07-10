@@ -4,19 +4,22 @@
   color: $accent-c;
 }
 
-.button {
+.text-block {
+  font-weight: 400;
+  font-size: size(16);
+  line-height: size(24);
+}
+
+.cmn-button {
   color: $white-c;
   width: size(150);
   height: size(50);
   font-size: $navSize;
-  box-shadow: 0 size(1) size(10) $accent-c;
   background: $accent-c;
-  outline: none;
-  border: none;
   border-radius: size(5);
   font-weight: 500;
-  cursor: pointer;
+
   &:hover {
-    box-shadow: 0 size(1) size(10) $dark1-c;
+    box-shadow: 0 size(1) size(10) $accent-c;
   }
 }

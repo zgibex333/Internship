@@ -1,0 +1,141 @@
+body {
+  position: relative;
+  background: $dark2-c;
+}
+
+.hero {
+  color: $white-c;
+  padding: 0 size(15) 0 size(15);
+
+  &__socials {
+    position: fixed;
+    top: size(317);
+    height: size(175);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__icon {
+      cursor: pointer;
+      width: size(40);
+      height: size(40);
+      background: $dark1-c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        fill: $white-c;
+      }
+
+      &:hover {
+        background: $accent-c;
+        box-shadow: size(4) size(5) size(15) rgba(255, 83, 0, 0.4);
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: size(253) 0 size(153) 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.hero-left {
+  flex-grow: 1;
+  max-width: size(493);
+
+  .hero-title {
+    font-weight: 700;
+    font-size: $headingMain;
+    line-height: size(59);
+  }
+
+  .hero-text {
+    margin: size(25) 0 size(50) 0;
+  }
+}
+
+.hero-right {
+  flex-grow: 1;
+  max-width: size(639);
+
+  &__inner {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: top;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .hero {
+    &__socials {
+      top: size(139);
+    }
+
+    &__wrapper {
+      padding: size(153) 0 size(73) 0;
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  .hero-left {
+    flex: 1 0 size(349);
+    max-width: none;
+
+    .hero-title {
+      font-weight: 600;
+      font-size: $heading;
+      line-height: size(48);
+    }
+
+    .hero-text {
+      margin: size(18) 0 size(25) 0;
+    }
+  }
+
+  .hero-right {
+    flex: 1 0 size(307);
+    max-width: none;
+
+    &__inner {
+      max-width: size(335);
+      margin: 0 auto;
+      img {
+        object-position: center;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .hero {
+    &__socials {
+      display: none;
+    }
+
+    &__wrapper {
+      padding: size(100) 0 size(50) 0;
+    }
+  }
+
+  .hero-left {
+    flex: 1 0 size(335);
+    max-width: none;
+    text-align: center;
+    padding-top: size(50);
+
+    .hero-title {
+      font-weight: 600;
+      font-size: $mobileTitle;
+      line-height: size(39);
+    }
+  }
+}
