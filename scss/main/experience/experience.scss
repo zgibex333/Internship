@@ -35,6 +35,10 @@
     margin-bottom: size(50);
   }
 
+  &__right_column {
+      align-self: flex-start; 
+  }
+
   &__left_column {
     margin-top: size(23);
   }

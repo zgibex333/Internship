@@ -1430,6 +1430,9 @@ body {
 .experience__p_second {
   margin-bottom: 3.125rem;
 }
+.experience__right_column {
+  align-self: flex-start;
+}
 .experience__left_column {
   margin-top: 1.4375rem;
 }
@@ -1593,5 +1596,135 @@ body {
   .experience__point::after {
     content: "";
     display: none;
+  }
+}
+.team {
+  color: #ffffff;
+  background: #18191a;
+  padding: 0 0.9375rem;
+}
+.team__info {
+  text-align: center;
+  padding: 7.5rem 0 3.75rem 0;
+}
+.team__cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.875rem;
+  padding-bottom: 7.5rem;
+}
+.team__card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #242526;
+  box-shadow: 0 0.0625rem 0.625rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.team__card:hover .card__socials {
+  visibility: visible;
+}
+
+.card__photo {
+  width: 100%;
+  position: relative;
+}
+.card__photo::after {
+  content: "";
+  display: block;
+  padding-top: 92.59%;
+}
+.card__photo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card__socials {
+  visibility: hidden;
+  position: absolute;
+  top: 1.8125rem;
+  right: 0;
+  width: 14.8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card__icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  cursor: pointer;
+  margin-bottom: 0.3125rem;
+}
+.card__icon::after {
+  margin-top: 100%;
+  display: block;
+  content: "";
+}
+.card__icon:hover {
+  background: #ff5300;
+  box-shadow: 0.0625rem 0.4375rem 0.625rem rgba(255, 83, 0, 0.5);
+}
+.card__icon:hover svg {
+  fill: #ffffff;
+}
+.card__icon svg {
+  fill: #ff5300;
+}
+.card__description {
+  text-align: center;
+  padding: 1.5rem 0.625rem 0.9375rem 0.625rem;
+}
+.card__name {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+.card__office {
+  margin-top: 0.75rem;
+  color: #7b7b7b;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 48rem) {
+  .team__cards {
+    min-width: 53.9375rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5625rem;
+  }
+  .team__card {
+    min-width: 13.3125rem;
+  }
+  .team__card .card__socials {
+    visibility: visible;
+  }
+  .team .overflow {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 23.5rem) {
+  .team__cards {
+    gap: 0.9375rem;
+    padding-bottom: 3.125rem;
+  }
+  .team__info {
+    text-align: center;
+    padding: 3.125rem 0 1.125rem 0;
+  }
+  .team__title {
+    max-width: 13.5625rem;
+    margin: 0 auto;
+  }
+  .team__card {
+    min-width: 16.875rem;
+  }
+  .team__card .card__socials {
+    visibility: visible;
   }
 }
