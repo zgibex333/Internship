@@ -1728,3 +1728,106 @@ body {
     visibility: visible;
   }
 }
+.work {
+  color: #ffffff;
+  padding: 0 0.9375rem;
+  background: #18191a;
+  padding-bottom: 7.5rem;
+}
+.work__text {
+  text-align: center;
+}
+.work__title {
+  max-width: 31.25rem;
+  margin: 0 auto 1.5625rem auto;
+}
+.work__tabs {
+  max-width: 41.875rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-bottom: 3.75rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  align-items: center;
+  gap: 0.3125rem;
+  min-width: 34.375rem;
+}
+.work__projects {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(13.3125rem, 1fr));
+  grid-gap: 1.875rem;
+}
+.work .projects-column {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(min-content, max-content));
+  grid-gap: 1.875rem;
+}
+.work__project {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+.work__project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.work__project:hover::after {
+  position: absolute;
+  content: url("../../../assets/work/search.svg");
+  top: 70%;
+  left: 50%;
+  transform: translate(-70%, -50%);
+}
+.work__project:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ff5300;
+  opacity: 90%;
+}
+
+@media (max-width: 48rem) {
+  .work__title {
+    max-width: 21.875rem;
+  }
+  .work__tabs {
+    max-width: 38.125rem;
+  }
+  .work__projects {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(13.3125rem, 1fr));
+    grid-gap: 1.5625rem;
+  }
+  .work .projects-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
+    grid-gap: 1.5625rem;
+  }
+  .work .tab-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 23.5rem) {
+  .work {
+    padding-bottom: 3.125rem;
+  }
+  .work__title {
+    max-width: 15.9375rem;
+  }
+  .work__tabs {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    min-width: 27.5rem;
+    padding-bottom: 3.125rem;
+  }
+}
