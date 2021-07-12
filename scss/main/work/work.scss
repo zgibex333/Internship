@@ -4,13 +4,17 @@
   background: $dark3-c;
   padding-bottom: size(120);
 
+  .new__lines {
+    display: block;
+  }
+
   &__text {
     text-align: center;
   }
 
   &__title {
-    max-width: size(500);
-    margin: 0 auto size(25) auto;
+    max-width: size(650);
+    margin: 0 auto size(25);
   }
 
   &__tabs {
@@ -77,7 +81,7 @@
 @media (max-width: $tablet) {
   .work {
     &__title {
-      max-width: size(350);
+      max-width: size(450);
     }
 
     &__tabs {
@@ -111,8 +115,12 @@
   .work {
     padding-bottom: size(50);
 
+    .new__lines {
+      display: inline;
+    }
+
     &__title {
-      max-width: size(255);
+      max-width: size(300);
     }
 
     &__tabs {

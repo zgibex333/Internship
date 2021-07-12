@@ -94,6 +94,8 @@ video {
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -461,6 +463,7 @@ textarea {
 }
 
 .cmn-button {
+  display: block;
   color: #ffffff;
   width: 9.375rem;
   height: 3.125rem;
@@ -468,11 +471,20 @@ textarea {
   background: #ff5300;
   border-radius: 0.3125rem;
   font-weight: 500;
+  text-align: center;
+  line-height: 3.125rem;
+  cursor: pointer;
 }
 .cmn-button:hover {
   box-shadow: 0 0.0625rem 0.625rem #ff5300;
 }
 
+@media (max-width: 23.5rem) {
+  .cmn-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .borders {
   padding-top: 7.5rem;
 }
@@ -527,19 +539,19 @@ body {
 body button {
   font-family: inherit;
 }
-body a {
+body a:not(.cmn-button) {
   text-decoration: none;
 }
-body a:link {
+body a:not(.cmn-button):link {
   color: #ffffff;
 }
-body a:visited {
+body a:not(.cmn-button):visited {
   color: #ffffff;
 }
-body a:hover {
+body a:not(.cmn-button):hover {
   color: #ff5300;
 }
-body a:active {
+body a:not(.cmn-button):active {
   color: #ff5300;
 }
 body ul {
@@ -1081,7 +1093,7 @@ body {
 
 .hero {
   color: #ffffff;
-  padding: 0 0.9375rem 0 0.9375rem;
+  padding: 0 0.9375rem 0;
 }
 .hero__socials {
   position: fixed;
@@ -1110,7 +1122,7 @@ body {
   box-shadow: 0.25rem 0.3125rem 0.9375rem rgba(255, 83, 0, 0.4);
 }
 .hero__wrapper {
-  padding: 15.8125rem 0 9.5625rem 0;
+  padding: 15.8125rem 0 9.5625rem;
   display: flex;
   justify-content: space-between;
 }
@@ -1125,7 +1137,7 @@ body {
   line-height: 3.6875rem;
 }
 .hero-left .hero-text {
-  margin: 1.5625rem 0 3.125rem 0;
+  margin: 1.5625rem 0 3.125rem;
 }
 
 .hero-right {
@@ -1147,7 +1159,7 @@ body {
     top: 8.6875rem;
   }
   .hero__wrapper {
-    padding: 9.5625rem 0 4.5625rem 0;
+    padding: 9.5625rem 0 4.5625rem;
     flex-wrap: wrap-reverse;
   }
 
@@ -1161,7 +1173,7 @@ body {
     line-height: 3rem;
   }
   .hero-left .hero-text {
-    margin: 1.125rem 0 1.5625rem 0;
+    margin: 1.125rem 0 1.5625rem;
   }
 
   .hero-right {
@@ -1181,7 +1193,7 @@ body {
     display: none;
   }
   .hero__wrapper {
-    padding: 6.25rem 0 3.125rem 0;
+    padding: 6.25rem 0 3.125rem;
   }
 
   .hero-right {
@@ -1204,7 +1216,10 @@ body {
 .about {
   background: #18191a;
   color: #ffffff;
-  padding: 0 0.9375rem 0 0.9375rem;
+  padding: 0 0.9375rem 0;
+}
+.about .new__lines {
+  display: block;
 }
 .about__info {
   display: flex;
@@ -1267,13 +1282,13 @@ body {
 .cards__description {
   text-align: center;
   max-width: 12.875rem;
-  margin: 2.25rem auto 0 auto;
+  margin: 2.25rem auto 0;
   line-height: 1.5rem;
 }
 
 .card {
   width: 100%;
-  padding: 1.5625rem 0.3125rem 1.3125rem 0.3125rem;
+  padding: 1.5625rem 0.3125rem 1.3125rem;
   background: #242526;
 }
 
@@ -1297,6 +1312,9 @@ body {
 }
 
 @media (max-width: 48rem) {
+  .about .new__lines {
+    display: inline;
+  }
   .about__info {
     padding-bottom: 5.25rem;
     flex-wrap: wrap;
@@ -1333,7 +1351,7 @@ body {
   }
 
   .card {
-    padding: 2.1875rem 0.3125rem 1.125rem 0.3125rem;
+    padding: 2.1875rem 0.3125rem 1.125rem;
   }
 
   .first-circle {
@@ -1362,6 +1380,11 @@ body {
   .about__pretitle {
     padding-top: 3.125rem;
   }
+  .about__title {
+    max-width: 16.375rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .about__left {
     flex: 1 0 12.5rem;
   }
@@ -1385,14 +1408,14 @@ body {
   }
   .cards__description {
     max-width: 15.625rem;
-    margin: 2.3125rem auto 0 auto;
+    margin: 2.3125rem auto 0;
     line-height: 1.5625rem;
     font-size: 1.25rem;
     font-weight: 500;
   }
 
   .card {
-    padding: 1.5625rem 0.3125rem 1.125rem 0.3125rem;
+    padding: 1.5625rem 0.3125rem 1.125rem;
   }
 
   .about-wrapper {
@@ -1480,6 +1503,9 @@ body {
 }
 
 @media (max-width: 48rem) {
+  .experience .new__lines {
+    display: block;
+  }
   .experience__wrapper {
     width: 100%;
     display: flex;
@@ -1499,7 +1525,7 @@ body {
     margin: 0 auto;
   }
   .experience__title {
-    max-width: 19.375rem;
+    max-width: 23.4375rem;
   }
   .experience__pretitle {
     margin-top: 0;
@@ -1533,6 +1559,9 @@ body {
   }
 }
 @media (max-width: 23.5rem) {
+  .experience .new__lines {
+    display: inline;
+  }
   .experience__wrapper {
     padding: 3.125rem 0;
     gap: 0;
@@ -1550,6 +1579,7 @@ body {
   }
   .experience__title {
     margin: 0 auto;
+    max-width: 18.75rem;
   }
   .experience__pretitle {
     margin-top: 0;
@@ -1603,9 +1633,12 @@ body {
   background: #18191a;
   padding: 0 0.9375rem;
 }
+.team .new__lines {
+  display: block;
+}
 .team__info {
   text-align: center;
-  padding: 7.5rem 0 3.75rem 0;
+  padding: 7.5rem 0 3.75rem;
 }
 .team__cards {
   width: 100%;
@@ -1677,7 +1710,7 @@ body {
 }
 .card__description {
   text-align: center;
-  padding: 1.5rem 0.625rem 0.9375rem 0.625rem;
+  padding: 1.5rem 0.625rem 0.9375rem;
 }
 .card__name {
   font-weight: 500;
@@ -1715,7 +1748,7 @@ body {
   }
   .team__info {
     text-align: center;
-    padding: 3.125rem 0 1.125rem 0;
+    padding: 3.125rem 0 1.125rem;
   }
   .team__title {
     max-width: 13.5625rem;
@@ -1734,12 +1767,15 @@ body {
   background: #18191a;
   padding-bottom: 7.5rem;
 }
+.work .new__lines {
+  display: block;
+}
 .work__text {
   text-align: center;
 }
 .work__title {
-  max-width: 31.25rem;
-  margin: 0 auto 1.5625rem auto;
+  max-width: 40.625rem;
+  margin: 0 auto 1.5625rem;
 }
 .work__tabs {
   max-width: 41.875rem;
@@ -1795,7 +1831,7 @@ body {
 
 @media (max-width: 48rem) {
   .work__title {
-    max-width: 21.875rem;
+    max-width: 28.125rem;
   }
   .work__tabs {
     max-width: 38.125rem;
@@ -1820,8 +1856,11 @@ body {
   .work {
     padding-bottom: 3.125rem;
   }
+  .work .new__lines {
+    display: inline;
+  }
   .work__title {
-    max-width: 15.9375rem;
+    max-width: 18.75rem;
   }
   .work__tabs {
     font-weight: 400;

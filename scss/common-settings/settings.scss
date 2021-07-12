@@ -11,6 +11,7 @@
 }
 
 .cmn-button {
+  display: block;
   color: $white-c;
   width: size(150);
   height: size(50);
@@ -18,9 +19,19 @@
   background: $accent-c;
   border-radius: size(5);
   font-weight: 500;
+  text-align: center;
+  line-height: size(50);
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 size(1) size(10) $accent-c;
+  }
+}
+
+@media (max-width: $mobile) {
+  .cmn-button {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

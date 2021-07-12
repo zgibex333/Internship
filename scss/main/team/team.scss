@@ -3,9 +3,13 @@
   background: $dark3-c;
   padding: 0 size(15);
 
+  .new__lines {
+    display: block;
+  }
+
   &__info {
     text-align: center;
-    padding: size(120) 0 size(60) 0;
+    padding: size(120) 0 size(60);
   }
 
   &__cards {
@@ -93,7 +97,7 @@
 
   &__description {
     text-align: center;
-    padding: size(24) size(10) size(15) size(10);
+    padding: size(24) size(10) size(15);
   }
 
   &__name {
@@ -126,8 +130,6 @@
       }
     }
 
-  
-
     .overflow {
       width: 100%;
       overflow-x: scroll;
@@ -144,7 +146,7 @@
 
     &__info {
       text-align: center;
-      padding: size(50) 0 size(18) 0;
+      padding: size(50) 0 size(18);
     }
 
     &__title {

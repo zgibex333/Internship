@@ -5,7 +5,7 @@ body {
 
 .hero {
   color: $white-c;
-  padding: 0 size(15) 0 size(15);
+  padding: 0 size(15) 0;
 
   &__socials {
     position: fixed;
@@ -38,7 +38,7 @@ body {
   }
 
   &__wrapper {
-    padding: size(253) 0 size(153) 0;
+    padding: size(253) 0 size(153);
     display: flex;
     justify-content: space-between;
   }
@@ -55,7 +55,7 @@ body {
   }
 
   .hero-text {
-    margin: size(25) 0 size(50) 0;
+    margin: size(25) 0 size(50);
   }
 }
 
@@ -82,7 +82,7 @@ body {
     }
 
     &__wrapper {
-      padding: size(153) 0 size(73) 0;
+      padding: size(153) 0 size(73);
       flex-wrap: wrap-reverse;
     }
   }
@@ -98,7 +98,7 @@ body {
     }
 
     .hero-text {
-      margin: size(18) 0 size(25) 0;
+      margin: size(18) 0 size(25);
     }
   }
 
@@ -123,7 +123,7 @@ body {
     }
 
     &__wrapper {
-      padding: size(100) 0 size(50) 0;
+      padding: size(100) 0 size(50);
     }
   }
 
