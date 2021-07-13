@@ -1,0 +1,247 @@
+.about {
+  background: $dark3-c;
+  color: $white-c;
+  padding: 0 size(15) 0;
+
+  .new__lines {
+    display: block;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: size(60);
+  }
+
+  &__left {
+    flex-grow: 1;
+    max-width: size(610);
+
+    .left-img {
+      height: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: bottom;
+      }
+    }
+  }
+
+  &__right {
+    flex-grow: 1;
+    max-width: size(569);
+  }
+
+  &__title {
+    margin-bottom: size(18);
+  }
+
+  &__p_first {
+    margin-bottom: size(18);
+  }
+
+  &__p_second {
+    margin-bottom: size(25);
+  }
+}
+
+.about-wrapper {
+  padding-bottom: size(120);
+}
+
+.cards {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(size(570), 1fr));
+    grid-gap: size(30);
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(size(270), 1fr));
+    grid-gap: size(30);
+  }
+
+  &__circle {
+    width: size(70);
+    height: size(70);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $lightGray-c;
+    margin: 0 auto;
+  }
+
+  &__description {
+    text-align: center;
+    max-width: size(206);
+    margin: size(36) auto 0;
+    line-height: size(24);
+  }
+}
+
+.card {
+  width: 100%;
+  padding: size(25) size(5) size(21);
+  background: $dark2-c;
+}
+
+.first-circle:hover {
+  background: $accent-c;
+  box-shadow: size(4) size(5) size(15) rgba(255, 83, 0, 0.4);
+}
+
+.second-circle:hover {
+  box-shadow: size(4) size(5) size(15) rgba(0, 0, 0, 0.4);
+}
+
+.third-circle:hover {
+  background: $blue-c;
+  box-shadow: size(4) size(5) size(15) rgba(0, 194, 255, 0.4);
+}
+
+.fourth-circle:hover {
+  background: $dark2-c;
+  box-shadow: size(4) size(5) size(15) rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: $tablet) {
+  .about {
+    .new__lines {
+      display: inline;
+    }
+
+    &__info {
+      padding-bottom: size(84);
+      flex-wrap: wrap;
+    }
+
+    &__left {
+      flex: 1 0 size(300);
+      max-width: none;
+
+      .left-img {
+        img {
+          object-position: center;
+        }
+      }
+    }
+
+    &__right {
+      flex: 1 0 size(332);
+      max-width: none;
+    }
+  }
+
+  .cards {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fill, minmax(size(332), 1fr));
+      grid-gap: size(24);
+    }
+
+    &__section {
+      grid-template-columns: repeat(2, minmax(size(154), 1fr));
+      grid-gap: size(24);
+    }
+
+    &__circle {
+      width: size(50);
+      height: size(50);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $lightGray-c;
+      margin: 0 auto;
+    }
+  }
+
+  .card {
+    padding: size(35) size(5) size(18);
+  }
+
+  .first-circle {
+    background: $accent-c;
+    box-shadow: size(4) size(5) size(15) rgba(255, 83, 0, 0.4);
+  }
+
+  .second-circle {
+    box-shadow: size(4) size(5) size(15) rgba(0, 0, 0, 0.4);
+  }
+
+  .third-circle {
+    background: $blue-c;
+    box-shadow: size(4) size(5) size(15) rgba(0, 194, 255, 0.4);
+  }
+
+  .fourth-circle {
+    background: $dark2-c;
+    box-shadow: size(4) size(5) size(15) rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: $mobile) {
+  .about {
+    &__info {
+      padding-bottom: size(50);
+    }
+
+    &__pretitle {
+      padding-top: size(50);
+    }
+
+    &__title {
+      max-width: size(262);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__left {
+      flex: 1 0 size(200);
+    }
+
+    &__right {
+      flex: 1 0 size(200);
+      text-align: center;
+    }
+  }
+
+  .cards {
+    &__wrapper {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: size(25);
+    }
+
+    &__section {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: size(25);
+    }
+
+    &__circle {
+      width: size(70);
+      height: size(70);
+      border-radius: 50%;
+    }
+
+    &__description {
+      max-width: size(250);
+      margin: size(37) auto 0;
+      line-height: size(25);
+      font-size: $navSize;
+      font-weight: 500;
+    }
+  }
+
+  .card {
+    padding: size(25) size(5) size(18);
+  }
+
+  .about-wrapper {
+    padding: size(50) 0;
+  }
+}

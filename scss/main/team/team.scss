@@ -1,0 +1,165 @@
+.team {
+  color: $white-c;
+  background: $dark3-c;
+  padding: 0 size(15);
+
+  .new__lines {
+    display: block;
+  }
+
+  &__info {
+    text-align: center;
+    padding: size(120) 0 size(60);
+  }
+
+  &__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: size(30);
+    padding-bottom: size(120);
+  }
+
+  &__card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $dark2-c;
+    box-shadow: 0 size(1) size(10) rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:hover {
+      .card__socials {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.card {
+  &__photo {
+    width: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 92.59%;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__socials {
+    visibility: hidden;
+    position: absolute;
+    top: size(29);
+    right: 0;
+    width: 14.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white-c;
+    cursor: pointer;
+    margin-bottom: size(5);
+
+    &::after {
+      margin-top: 100%;
+      display: block;
+      content: "";
+    }
+
+    &:hover {
+      background: $accent-c;
+      box-shadow: size(1) size(7) size(10) rgba(255, 83, 0, 0.5);
+
+      svg {
+        fill: $white-c;
+      }
+    }
+
+    svg {
+      fill: $accent-c;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    padding: size(24) size(10) size(15);
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: $navSize;
+    line-height: size(25);
+  }
+
+  &__office {
+    margin-top: size(12);
+    color: $lightGray-c;
+    font-weight: 400;
+    line-height: size(24);
+  }
+}
+
+@media (max-width: $tablet) {
+  .team {
+    &__cards {
+      min-width: size(863);
+      grid-template-columns: repeat(4, 1fr);
+      gap: size(25);
+    }
+
+    &__card {
+      min-width: size(213);
+
+      .card__socials {
+        visibility: visible;
+      }
+    }
+
+    .overflow {
+      width: 100%;
+      overflow-x: scroll;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .team {
+    &__cards {
+      gap: size(15);
+      padding-bottom: size(50);
+    }
+
+    &__info {
+      text-align: center;
+      padding: size(50) 0 size(18);
+    }
+
+    &__title {
+      max-width: size(217);
+      margin: 0 auto;
+    }
+
+    &__card {
+      min-width: size(270);
+
+      .card__socials {
+        visibility: visible;
+      }
+    }
+  }
+}

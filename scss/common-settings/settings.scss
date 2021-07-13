@@ -4,19 +4,78 @@
   color: $accent-c;
 }
 
-.button {
+.text-block {
+  font-weight: 400;
+  font-size: size(16);
+  line-height: size(24);
+}
+
+.cmn-button {
+  display: block;
   color: $white-c;
   width: size(150);
   height: size(50);
   font-size: $navSize;
-  box-shadow: 0 size(1) size(10) $accent-c;
   background: $accent-c;
-  outline: none;
-  border: none;
   border-radius: size(5);
   font-weight: 500;
+  text-align: center;
+  line-height: size(50);
   cursor: pointer;
+  @include linksColor($white-c, $white-c);
+
   &:hover {
-    box-shadow: 0 size(1) size(10) $dark1-c;
+    box-shadow: 0 size(1) size(10) $accent-c;
+  }
+}
+
+@media (max-width: $mobile) {
+  .cmn-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.borders {
+  padding-top: size(120);
+}
+
+.pre-title {
+  font-weight: 400;
+  font-size: $regularSize;
+  line-height: size(24);
+  margin-bottom: size(25);
+}
+
+.title {
+  font-weight: 600;
+  font-size: $heading;
+  line-height: size(48);
+}
+
+.paragrapgh {
+  font-size: $regularSize;
+  line-height: size(24);
+  font-weight: 400;
+  line-height: size(24);
+}
+
+@media (max-width: $tablet) {
+  .pre-title {
+    margin-bottom: size(18);
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: $mobileTitle;
+    line-height: size(39);
+  }
+}
+
+@media (max-width: $mobile) {
+  .title {
+    font-weight: 500;
+    font-size: $mobileHeading;
+    line-height: size(31);
   }
 }
