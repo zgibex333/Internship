@@ -15,7 +15,7 @@ body {
     font-family: inherit;
   }
 
-  a:not(.cmn-button) {
+  a {
     @include linksColor($white-c, $accent-c);
   }
 

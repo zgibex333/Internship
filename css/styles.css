@@ -474,6 +474,19 @@ textarea {
   text-align: center;
   line-height: 3.125rem;
   cursor: pointer;
+  text-decoration: none;
+}
+.cmn-button:link {
+  color: #ffffff;
+}
+.cmn-button:visited {
+  color: #ffffff;
+}
+.cmn-button:hover {
+  color: #ffffff;
+}
+.cmn-button:active {
+  color: #ffffff;
 }
 .cmn-button:hover {
   box-shadow: 0 0.0625rem 0.625rem #ff5300;
@@ -539,19 +552,19 @@ body {
 body button {
   font-family: inherit;
 }
-body a:not(.cmn-button) {
+body a {
   text-decoration: none;
 }
-body a:not(.cmn-button):link {
+body a:link {
   color: #ffffff;
 }
-body a:not(.cmn-button):visited {
+body a:visited {
   color: #ffffff;
 }
-body a:not(.cmn-button):hover {
+body a:hover {
   color: #ff5300;
 }
-body a:not(.cmn-button):active {
+body a:active {
   color: #ff5300;
 }
 body ul {

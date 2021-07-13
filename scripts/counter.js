@@ -1,13 +1,13 @@
 const itemsToCount = document.querySelectorAll('.customers');
 const counters = document.querySelector('.point-inner');
 
-document.addEventListener('scroll', startCounter)
+document.addEventListener('scroll', startCounter);
 
 function startCounter() {
     if (window.innerHeight >= counters.getBoundingClientRect().top) {
         Array.from(itemsToCount).forEach(item => {
-            counter(item)
-        })
+            counter(item);
+        });
         document.removeEventListener('scroll', startCounter);
     }
 }
@@ -27,16 +27,16 @@ function counter(item) {
     function increase() {
         if (counterNum > stopPoint) {
             setTimeout(() => {
-                item.innerText = `${stopPoint}+`
-            }, duration)
+                item.innerText = `${stopPoint}+`;
+            }, duration);
             return;
         } else {
             setTimeout(() => {
                 item.innerText = counterNum;
                 counterNum += 2;
-                increase()
-            }, duration)
+                increase();
+            }, duration);
         }
     }
-    increase()
+    increase();
 }
