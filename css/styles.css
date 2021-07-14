@@ -44,6 +44,7 @@ strong,
 sub,
 sup,
 tt,
+textarea,
 var,
 b,
 u,
@@ -1881,5 +1882,426 @@ body {
     line-height: 1.5rem;
     min-width: 27.5rem;
     padding-bottom: 3.125rem;
+  }
+}
+.contact {
+  color: #ffffff;
+  padding: 0 0.9375rem;
+  background: #18191a;
+}
+.contact__wrapper {
+  padding-bottom: 3.75rem;
+}
+.contact .new__lines {
+  display: block;
+}
+.contact__hat {
+  text-align: center;
+  padding-bottom: 3.75rem;
+}
+.contact__cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23.125rem, max-content));
+  grid-gap: 1.875rem;
+  justify-content: center;
+  padding-bottom: 3.75rem;
+}
+.contact__card {
+  max-width: 23.125rem;
+  height: 14.375rem;
+  background: #242526;
+  padding: 1.125rem 1.125rem 1.625rem;
+}
+.contact__card:hover .card__logo {
+  box-shadow: 0.25rem 0.3125rem 0.9375rem rgba(255, 83, 0, 0.4);
+}
+.contact__map {
+  width: 100%;
+  position: relative;
+}
+.contact__map img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contact__map::after {
+  content: "";
+  display: block;
+  padding-top: 38.46%;
+}
+
+.card__head {
+  display: flex;
+  gap: 1.125rem;
+  align-self: center;
+}
+.card__logo {
+  width: 4.6875rem;
+  height: 4.6875rem;
+  border-radius: 50%;
+  background: #ff5300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__logo .logo__min {
+  display: none;
+}
+.card__pretitle {
+  font-weight: 500;
+  font-size: 1.5625rem;
+  color: #ff5300;
+  line-height: 1.9375rem;
+}
+.card__title {
+  font-weight: 600;
+  font-size: 1.953125rem;
+  line-height: 2.4375rem;
+  padding-top: 0.625rem;
+}
+.card__info {
+  margin-top: 2.375rem;
+}
+.card__info > a {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+.card__info > a:nth-child(1) {
+  margin-bottom: 1.25rem;
+}
+.card__address {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+
+.toll::after {
+  content: "(Toll free)";
+  color: #ff5300;
+  font-size: 1.25rem;
+  padding-left: 1.125rem;
+}
+
+.form__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3.75rem;
+}
+.form__left {
+  flex-grow: 1;
+  max-width: 100%;
+  position: relative;
+}
+.form__left img {
+  position: absolute;
+  bottom: 4.6875rem;
+  right: -1.875rem;
+}
+.form__right {
+  flex-grow: 1;
+  max-width: 41.875rem;
+}
+.form__title {
+  font-weight: 600;
+  font-size: 1.953125rem;
+  line-height: 2.4375rem;
+  padding-bottom: 1.125rem;
+}
+.form__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 3.75rem);
+  grid-column-gap: 0.625rem;
+  grid-row-gap: 1.125rem;
+}
+.form__grid > input {
+  background: #242526;
+  padding: 1.125rem;
+  color: #ffffff;
+}
+.form__grid > input::placeholder {
+  color: #ffffff;
+}
+.form__area {
+  resize: none;
+  background: #242526;
+  width: 100%;
+  height: 10.1875rem;
+  padding: 1.125rem;
+  margin-top: 1.8125rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  color: #ffffff;
+}
+.form__area::placeholder {
+  color: #ffffff;
+}
+
+.submit__form {
+  margin-top: 1.8125rem;
+  color: #ffffff;
+  width: 11.875rem;
+  height: 3.125rem;
+  font-size: 1.25rem;
+  background: #ff5300;
+  border-radius: 0.3125rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 3.125rem;
+  cursor: pointer;
+}
+.submit__form:hover {
+  box-shadow: 0 0.0625rem 0.625rem #ff5300;
+}
+
+.brands {
+  background: #18191a;
+  padding: 3.75rem 0.9375rem 7.5rem;
+}
+.brands__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.9375rem;
+}
+.brands__item {
+  flex-grow: 1;
+  max-width: fit-content;
+}
+.brands__item img {
+  width: 100%;
+}
+
+@media (max-width: 48rem) {
+  .contact__cards {
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 13.3125rem));
+    grid-gap: 1.5rem;
+  }
+  .contact__card {
+    height: 10.8125rem;
+    padding: 1.125rem 0rem 1.125rem 1.125rem;
+  }
+
+  .card__head {
+    gap: 0.9375rem;
+  }
+  .card__logo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .card__logo .logo__large {
+    display: none;
+  }
+  .card__logo .logo__min {
+    display: block;
+  }
+  .card__pretitle {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #ff5300;
+    line-height: 1.5625rem;
+  }
+  .card__title {
+    font-weight: 500;
+    font-size: 1.5625rem;
+    line-height: 1.9375rem;
+    padding-top: 0rem;
+  }
+  .card__info {
+    margin-top: 1.125rem;
+  }
+  .card__info > a {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .card__info > a:nth-child(1) {
+    margin-bottom: 0.9375rem;
+  }
+  .card__address {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .toll::after {
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    padding-left: 0.25rem;
+  }
+
+  .form__left img {
+    max-width: 21.5625rem;
+    right: 0rem;
+  }
+  .form__right {
+    max-width: 24.4375rem;
+  }
+  .form__title {
+    font-weight: 500;
+    font-size: 1.5625rem;
+    line-height: 1.9375rem;
+  }
+  .form__grid {
+    grid-template-columns: repeat(auto-fill, minmax(11.4375rem, 1fr));
+    grid-template-rows: repeat(auto-fill, 3.125rem);
+    grid-column-gap: 1.3125rem;
+    grid-row-gap: 1.125rem;
+  }
+  .form__grid > input {
+    padding: 0rem 1.125rem;
+    height: 3.125rem;
+  }
+  .form__area {
+    margin-top: 1.125rem;
+    height: 6.8125rem;
+  }
+
+  .submit__form {
+    margin-top: 1.5625rem;
+  }
+
+  .brands__wrapper {
+    display: flex;
+    gap: 7.8%;
+  }
+  .brands__item {
+    flex-grow: 1;
+    max-width: none;
+    display: flex;
+  }
+  .brands__item img {
+    width: 100%;
+  }
+}
+@media (max-width: 23.5rem) {
+  .contact__wrapper {
+    padding-bottom: 1.5625rem;
+  }
+  .contact__hat {
+    text-align: center;
+    padding-bottom: 1.125rem;
+  }
+  .contact__cards {
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 21.4375rem));
+    grid-gap: 1.5625rem;
+    justify-content: center;
+    padding-bottom: 3.75rem;
+  }
+  .contact__card {
+    height: 14rem;
+    padding: 1.125rem 1.125rem 1.625rem;
+  }
+  .contact__map {
+    width: 100%;
+    height: 15.625rem;
+    background: black;
+    position: relative;
+  }
+
+  .card__head {
+    gap: 1.125rem;
+  }
+  .card__logo {
+    width: 4.6875rem;
+    height: 4.6875rem;
+  }
+  .card__logo .logo__min {
+    display: none;
+  }
+  .card__logo .logo__large {
+    display: block;
+  }
+  .card__pretitle {
+    font-weight: 500;
+    font-size: 1.5625rem;
+    line-height: 1.9375rem;
+  }
+  .card__title {
+    font-weight: 600;
+    font-size: 1.953125rem;
+    line-height: 2.4375rem;
+    padding-top: 0.625rem;
+  }
+  .card__info {
+    margin-top: 2.125rem;
+  }
+  .card__info > a {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+  }
+  .card__info > a:nth-child(1) {
+    margin-bottom: 0.625rem;
+  }
+  .card__address {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+  }
+
+  .toll::after {
+    font-size: 1.25rem;
+    padding-left: 1.5625rem;
+  }
+
+  .form__wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 3.125rem;
+    gap: 3.125rem;
+  }
+  .form__left {
+    max-width: 100%;
+    position: relative;
+  }
+  .form__left img {
+    position: static;
+    width: 100%;
+  }
+  .form__right {
+    max-width: 21.4375rem;
+  }
+  .form__title {
+    padding-bottom: 1.125rem;
+    font-weight: 500;
+    font-size: 1.5625rem;
+    line-height: 1.9375rem;
+    max-width: 11.25rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .form__grid {
+    display: grid;
+    gap: 1.125rem;
+    grid-template-rows: repeat(auto-fill, 3.75rem);
+  }
+  .form__grid > input {
+    height: 3.75rem;
+  }
+  .form__area {
+    height: 10.1875rem;
+    margin-top: 1.125rem;
+  }
+
+  .submit__form {
+    margin-top: 1.5625rem;
+    align-self: left;
+  }
+
+  .brands {
+    background: #18191a;
+    padding: 1.5625rem 0.9375rem 3.125rem;
+  }
+  .brands__wrapper {
+    gap: 4%;
   }
 }
