@@ -103,6 +103,7 @@
       font-weight: 500;
       font-size: $navSize;
       line-height: size(25);
+      padding: 0;
 
       &:nth-child(1) {
         margin-bottom: size(20);
@@ -117,8 +118,7 @@
   }
 }
 
-.toll::after {
-  content: "(Toll free)";
+.toll {
   color: $accent-c;
   font-size: $navSize;
   padding-left: size(18);
@@ -295,7 +295,7 @@
     }
   }
 
-  .toll::after {
+  .toll {
     font-weight: 400;
     font-size: size(12.8);
     line-height: size(16);
@@ -443,7 +443,7 @@
     }
   }
 
-  .toll::after {
+  .toll {
     font-size: $navSize;
     padding-left: size(25);
   }
