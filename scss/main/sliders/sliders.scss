@@ -1,0 +1,252 @@
+.clients {
+  color: $white-c;
+  padding: 0 size(15);
+
+  &__cards {
+    position: relative;
+  }
+
+  &__wrapper {
+    padding: size(60) 0;
+  }
+
+  &__head {
+    text-align: center;
+    margin-bottom: size(60);
+  }
+}
+
+.active-slider {
+  animation: slide-effect-none 0.5s ease;
+  position: absolute;
+  width: size(49);
+  height: size(15);
+  background: $primary-c;
+  border-radius: size(7.5);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.new__lines {
+  display: block;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    flex-grow: 1;
+    max-width: size(510);
+    position: relative;
+  }
+
+  &__logo {
+    width: size(80);
+    height: size(80);
+    border-radius: 50%;
+    position: absolute;
+    top: size(25);
+    z-index: 2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    max-width: size(470);
+    margin-left: size(40);
+    padding: size(34) size(35) size(35) size(65);
+    background: $accent-c;
+    z-index: 1;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: $mobileHeading;
+    line-height: size(31);
+  }
+
+  &__position {
+    font-size: $regularSize;
+    line-height: size(24);
+    font-weight: 400;
+    margin: size(7) 0 size(23);
+  }
+
+  &__description {
+    font-size: $regularSize;
+    line-height: size(24);
+    font-weight: 400;
+  }
+
+  &__part {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: size(10);
+  }
+
+  .slick-track {
+    display: flex;
+    cursor: grab;
+    justify-content: space-between;
+  }
+
+  .slick-dots {
+    margin: size(50) auto 0;
+    display: flex;
+    width: size(90);
+    justify-content: space-between;
+
+    button {
+      width: size(15);
+      height: size(15);
+      border-radius: 50%;
+      background: $grey-c;
+    }
+
+    & > li {
+      font-size: 0;
+    }
+  }
+
+  .slick-active button {
+    background: $accent-c;
+  }
+
+  .slick-list {
+    overflow: hidden;
+  }
+}
+
+.active-slider-move {
+  animation: slide-effect 0.5s;
+  background: $accent-c;
+}
+
+@keyframes slide-effect {
+  0% {
+    background: inherit;
+  }
+
+  100% {
+    background: $accent-c;
+  }
+}
+
+@keyframes slide-effect-none {
+  0% {
+    background: $accent-c;
+  }
+
+  100% {
+    background: $primary-c;
+  }
+}
+
+@media (max-width: $tablet) {
+  .slide {
+    &__item {
+      flex: 1 0 size(236);
+      max-width: size(292);
+      position: relative;
+    }
+
+    &__logo {
+      width: size(50);
+      height: size(50);
+      border-radius: 50%;
+      top: size(26);
+    }
+
+    &__info {
+      max-width: size(292);
+      margin-left: size(25);
+      padding: size(26) size(32) size(15) size(35);
+    }
+
+    &__name {
+      font-weight: 500;
+      font-size: $navSize;
+      line-height: size(25);
+    }
+
+    &__position {
+      margin: size(10) 0 size(15);
+    }
+
+    &__description {
+      font-size: $regularSize;
+      line-height: size(24);
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .clients {
+    &__wrapper {
+      padding: size(50) 0;
+    }
+
+    &__head {
+      text-align: center;
+      margin-bottom: size(18);
+    }
+
+    &__title {
+      max-width: size(265);
+      margin: 0 auto;
+    }
+  }
+
+  .slide {
+    &__item {
+      flex: 1 0 size(226);
+      max-width: size(226);
+    }
+
+    &__logo {
+      width: size(40);
+      height: size(40);
+    }
+
+    &__info {
+      max-width: size(226);
+      margin-left: size(20);
+      padding: size(26) size(12) size(18) size(35);
+    }
+
+    &__name {
+      font-size: $regularSize;
+      line-height: size(24);
+      font-weight: 400;
+    }
+
+    &__position {
+      margin: size(8) 0 size(12);
+      font-size: $tiny;
+      line-height: size(16);
+      font-weight: 400;
+    }
+
+    &__description {
+      font-size: $regularSize;
+      line-height: size(24);
+      font-weight: 400;
+    }
+  }
+
+  .slick-track {
+    gap: size(18);
+  }
+
+  .slick-dots {
+    margin: size(25) auto 0 !important;
+  }
+}
