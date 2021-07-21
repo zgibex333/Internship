@@ -1,36 +1,23 @@
+const sliderSettings = {
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    infinite: false,
+    dots: true,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    pauseOnFocus: true,
+}
+
+//slider
 $(document).ready(() => {
-    $('.slide').slick({
-        arrows: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: false,
-        dots: true,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        pauseOnFocus: true,
-    });
-    $('.blog-slide').slick({
-        arrows: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: false,
-        dots: true,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        pauseOnFocus: true,
-    });
+    $('.slide').slick(sliderSettings);
+    $('.blog-slide').slick(sliderSettings);
 });
 
-//variables
-const activeSlider = document.querySelectorAll('.active-slider');
-const fieldNext = document.querySelector('.blog-slide')
-const field = document.querySelector('.slide');
-
 //event listeners
-field.addEventListener('mousedown', startAction);
-field.addEventListener('touchstart', startAction);
-fieldNext.addEventListener('mousedown', startAction);
-fieldNext.addEventListener('touchstart', startAction);
+$('.blog-slide').on('mousedown touchstart', startAction);
+$('.slide').on('mousedown touchstart', startAction);
 
 //function
 function startAction(e) {
