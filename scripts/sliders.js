@@ -11,8 +11,7 @@ const sliderSettings = {
 
 //slider
 $(document).ready(() => {
-    $('.slide').slick(sliderSettings);
-    $('.blog-slide').slick(sliderSettings);
+    $('.slide, .blog-slide').slick(sliderSettings);
 });
 
 //event listeners
