@@ -9,9 +9,6 @@ $(document).ready(() => {
         autoplaySpeed: 3000,
         pauseOnFocus: true,
     });
-});
-
-$(document).ready(() => {
     $('.blog-slide').slick({
         arrows: false,
         slidesToShow: 2,
@@ -24,35 +21,30 @@ $(document).ready(() => {
     });
 });
 
+//variables
 const activeSlider = document.querySelectorAll('.active-slider');
 const fieldNext = document.querySelector('.blog-slide')
 const field = document.querySelector('.slide');
-const arrayWithSliders = [field, fieldNext];
 
-field.addEventListener('mousedown', () => {
-    activeSlider[0].classList.add('active-slider-move');
-    document.addEventListener('mouseup', () => {
-        activeSlider[0].classList.remove('active-slider-move');
-    })
-})
+//event listeners
+field.addEventListener('mousedown', startAction);
+field.addEventListener('touchstart', startAction);
+fieldNext.addEventListener('mousedown', startAction);
+fieldNext.addEventListener('touchstart', startAction);
 
-field.addEventListener('touchstart', () => {
-    activeSlider[0].classList.add('active-slider-move');
-    document.addEventListener('touchend', () => {
-        activeSlider[0].classList.remove('active-slider-move');
-    })
-})
-
-fieldNext.addEventListener('mousedown', () => {
-    activeSlider[1].classList.add('active-slider-move');
-    document.addEventListener('mouseup', () => {
-        activeSlider[1].classList.remove('active-slider-move');
-    })
-})
-
-fieldNext.addEventListener('touchstart', () => {
-    activeSlider[1].classList.add('active-slider-move');
-    document.addEventListener('touchend', () => {
-        activeSlider[1].classList.remove('active-slider-move');
-    })
-})
+//function
+function startAction(e) {
+    const node = this.parentElement.querySelector('.active-slider');
+    if (e.type === 'mousedown') {
+        node.classList.add('active-slider-move');
+        document.addEventListener('mouseup', () => {
+            node.classList.remove('active-slider-move');
+        })
+    }
+    if (e.type === "touchstart") {
+        node.classList.add('active-slider-move');
+        document.addEventListener('touchend', () => {
+            node.classList.remove('active-slider-move');
+        })
+    }
+}
