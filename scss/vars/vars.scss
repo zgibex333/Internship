@@ -1,23 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
 @import "./mixins.scss";
+@import "./themeColors.scss";
 // base for mixin
 $base-size: 16;
+
 //colors
-$primary-c: #373737;
-$accent-c: #ff5300;
-$paragraph-c: #7b7b7b;
-$white-c: #ffffff;
-$lightGray-c: #7b7b7b;
-
-//backgrounds
-$dark1-c: #3a3b3c;
-$dark2-c: #242526;
-$dark3-c: #18191a;
-
-//circles
-$grey-c: #7b7b7b;
-$blue-c: #00acff;
-//////////////
+$lightDarkToWhite: var(--lightDark-white);
+$darkToPink: var(--dark-pink);
+$dark2ToWhite: var(--dark2-white);
+$darkToWhite: var(--dark-white);
+$lightGrayToWhite: var(--light-gray-white);
+$pureBlackToWhite: var(--clear-black-white);
+$veryDarkToWhite: var(--veryDark-white);
+$orangeToBlack: var(--orange-black);
+$whiteToBlack: var(--white-black);
+$easyGrayToPink: var(--easyGray-pink);
+$alwaysWhite: var(--always-white);
+$alwaysGray: var(--always-gray);
+$alwaysBlack: var(--always-black);
+$alwaysDarkLight: var(--always-dark-light);
+$accent-c: var(--accent);
+$blue-c: var(--blue);
+$themeBtn: var(--themeBtn);
+$whiteToOrange: var(--white-orange);
+$alwaysDarken: var(--alwaysDarken);
+$whiteOrange: var(--whiteToOrange);
 
 //fontfamily
 $workSans: "Work Sans", sans-serif;
@@ -30,6 +37,7 @@ $heading: size(39.0625);
 $mobileTitle: size(31.25);
 $mobileHeading: size(25);
 $tiny: size(12.8);
+$commentTitle: size(24);
 
 //resolutions
 $tablet: size(768);

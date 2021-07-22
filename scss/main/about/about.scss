@@ -1,6 +1,6 @@
 .about {
-  background: $dark3-c;
-  color: $white-c;
+  background: $veryDarkToWhite;
+  color: $alwaysWhite;
   padding: 0 size(15) 0;
 
   .new__lines {
@@ -36,14 +36,21 @@
 
   &__title {
     margin-bottom: size(18);
+    color: $dark2ToWhite;
+  }
+
+  &__pretitle {
+    color: $lightGrayToWhite;
   }
 
   &__p_first {
     margin-bottom: size(18);
+    color: $lightGrayToWhite;
   }
 
   &__p_second {
     margin-bottom: size(25);
+    color: $lightGrayToWhite;
   }
 }
 
@@ -73,7 +80,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $lightGray-c;
+    background: $alwaysGray;
     margin: 0 auto;
   }
 
@@ -88,7 +95,9 @@
 .card {
   width: 100%;
   padding: size(25) size(5) size(21);
-  background: $dark2-c;
+  background: $darkToWhite;
+  box-shadow: 0 size(1) size(10) rgba(0, 0, 0, 0.1);
+  color: $dark2ToWhite;
 }
 
 .first-circle:hover {
@@ -106,7 +115,7 @@
 }
 
 .fourth-circle:hover {
-  background: $dark2-c;
+  background: $alwaysDarken;
   box-shadow: size(4) size(5) size(15) rgba(0, 0, 0, 0.4);
 }
 
@@ -156,7 +165,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: $lightGray-c;
+      background: $alwaysGray;
       margin: 0 auto;
     }
   }
@@ -180,7 +189,7 @@
   }
 
   .fourth-circle {
-    background: $dark2-c;
+    background: $alwaysDarken;
     box-shadow: size(4) size(5) size(15) rgba(0, 0, 0, 0.4);
   }
 }

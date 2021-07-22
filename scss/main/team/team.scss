@@ -1,6 +1,6 @@
 .team {
-  color: $white-c;
-  background: $dark3-c;
+  color: $alwaysWhite;
+  background: $veryDarkToWhite;
   padding: 0 size(15);
 
   .new__lines {
@@ -10,6 +10,14 @@
   &__info {
     text-align: center;
     padding: size(120) 0 size(60);
+  }
+
+  &__title {
+    color: $dark2ToWhite;
+  }
+
+  &__pretitle {
+    color: $lightGrayToWhite;
   }
 
   &__cards {
@@ -24,7 +32,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background: $dark2-c;
+    background: $darkToWhite;
     box-shadow: 0 size(1) size(10) rgba(0, 0, 0, 0.1);
     cursor: pointer;
 
@@ -55,6 +63,10 @@
     }
   }
 
+  &__name {
+    color: $pureBlackToWhite;
+  }
+
   &__socials {
     visibility: hidden;
     position: absolute;
@@ -71,7 +83,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $white-c;
+    background: $alwaysWhite;
     cursor: pointer;
     margin-bottom: size(5);
 
@@ -86,7 +98,7 @@
       box-shadow: size(1) size(7) size(10) rgba(255, 83, 0, 0.5);
 
       svg {
-        fill: $white-c;
+        fill: $alwaysWhite;
       }
     }
 
@@ -108,7 +120,7 @@
 
   &__office {
     margin-top: size(12);
-    color: $lightGray-c;
+    color: $alwaysGray;
     font-weight: 400;
     line-height: size(24);
   }

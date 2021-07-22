@@ -14,8 +14,8 @@ footer {
 
 footer {
   width: 100%;
-  background: $primary-c;
-  color: $white-c;
+  background: $alwaysDarkLight;
+  color: $alwaysWhite;
   padding: 0 size(15);
 }
 
@@ -23,12 +23,16 @@ footer {
   display: flex;
   flex-wrap: wrap;
   padding: size(66) 0 size(60);
-  color: $white-c;
+  color: $alwaysWhite;
   font-weight: normal;
   line-height: size(24);
   width: 100%;
   justify-content: space-between;
   gap: size(20);
+
+  a {
+    @include linksColor($alwaysWhite, $accent-c);
+  }
 
   & > div {
     flex: 1 0 size(270);
@@ -81,14 +85,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $white-c;
+    background: $alwaysWhite;
     cursor: pointer;
 
     &:hover {
       background: $accent-c;
 
       svg {
-        fill: $white-c;
+        fill: $alwaysWhite;
       }
     }
 
@@ -117,7 +121,7 @@ footer {
 }
 
 .subscribe {
-  color: $white-c;
+  color: $alwaysWhite;
   width: size(189);
   font-size: $regularSize;
   height: size(60);
@@ -148,7 +152,7 @@ footer {
 }
 
 .rights {
-  color: $white-c;
+  color: $alwaysWhite;
   padding: 0 size(15);
   background: $accent-c;
   width: 100%;
@@ -246,7 +250,7 @@ footer {
   }
 
   .subscribe {
-    color: $white-c;
+    color: $alwaysWhite;
     width: size(119);
     font-weight: normal;
     font-size: size(12.8);
@@ -359,7 +363,7 @@ footer {
   }
 
   .subscribe {
-    color: $white-c;
+    color: $alwaysWhite;
     flex-grow: 1;
     max-width: size(262);
     font-weight: normal;

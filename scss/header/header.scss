@@ -16,7 +16,7 @@ body {
   }
 
   a {
-    @include linksColor($white-c, $accent-c);
+    @include linksColor($dark2ToWhite, $accent-c);
   }
 
   ul {
@@ -28,7 +28,7 @@ body {
   padding: size(26) size(15);
   width: 100%;
   position: absolute;
-  background: $primary-c;
+  background: $lightDarkToWhite;
   overflow: hidden;
   font-size: $navSize;
   z-index: 999;
@@ -81,6 +81,8 @@ body {
     display: block;
     margin: auto;
     cursor: pointer;
+    fill: $whiteToBlack;
+
     &:hover {
       path {
         fill: $accent-c;
@@ -151,7 +153,7 @@ body {
     cursor: pointer;
     &__line {
       height: size(2);
-      background: $white-c;
+      background: $dark2ToWhite;
     }
   }
 }
@@ -198,7 +200,7 @@ body {
     &__line {
       height: size(2);
       width: 100%;
-      background: $white-c;
+      background: $dark2ToWhite;
     }
   }
 }

@@ -1,7 +1,7 @@
 .contact {
-  color: $white-c;
+  color: $alwaysWhite;
   padding: 0 size(15);
-  background: $dark3-c;
+  background: $veryDarkToWhite;
 
   &__wrapper {
     padding-bottom: size(60);
@@ -16,6 +16,14 @@
     padding-bottom: size(60);
   }
 
+  &__pretitle {
+    color: $lightGrayToWhite;
+  }
+
+  &__title {
+    color: $dark2ToWhite;
+  }
+
   &__cards {
     width: 100%;
     display: grid;
@@ -28,8 +36,9 @@
   &__card {
     max-width: size(370);
     height: size(230);
-    background: $dark2-c;
+    background: $darkToWhite;
     padding: size(18) size(18) size(26);
+    box-shadow: 0 size(1) size(10) rgba(0, 0, 0, 0.1);
 
     &:hover {
       .card__logo {
@@ -92,6 +101,7 @@
     font-size: $mobileTitle;
     line-height: size(39);
     padding-top: size(10);
+    color: $dark2ToWhite;
   }
 
   &__info {
@@ -104,6 +114,7 @@
       font-size: $navSize;
       line-height: size(25);
       padding: 0;
+      @include linksColor($lightGrayToWhite, $accent-c);
 
       &:nth-child(1) {
         margin-bottom: size(20);
@@ -115,6 +126,7 @@
     font-weight: 500;
     font-size: $navSize;
     line-height: size(25);
+    color: $lightGrayToWhite;
   }
 }
 
@@ -153,6 +165,7 @@
     font-size: $mobileTitle;
     line-height: size(39);
     padding-bottom: size(18);
+    color: $dark2ToWhite;
   }
 
   &__grid {
@@ -164,36 +177,38 @@
     grid-row-gap: size(18);
 
     & > input {
-      background: $dark2-c;
+      background: $darkToWhite;
       padding: size(18);
-      color: $white-c;
+      color: $lightGrayToWhite;
+      box-shadow: size(0) size(1) size(10) rgba(0, 0, 0, 0.1);
 
       &::placeholder {
-        color: $white-c;
+        color: $lightGrayToWhite;
       }
     }
   }
 
   &__area {
     resize: none;
-    background: $dark2-c;
+    background: $darkToWhite;
     width: 100%;
     height: size(163);
     padding: size(18);
     margin-top: size(29);
     font-weight: 400;
     line-height: size(25);
-    color: $white-c;
+    color: $lightGrayToWhite;
+    box-shadow: size(0) size(1) size(10) rgba(0, 0, 0, 0.1);
 
     &::placeholder {
-      color: $white-c;
+      color: $lightGrayToWhite;
     }
   }
 }
 
 .submit__form {
   margin-top: size(29);
-  color: $white-c;
+  color: $alwaysWhite;
   width: size(190);
   height: size(50);
   font-size: $navSize;
@@ -210,7 +225,7 @@
 }
 
 .brands {
-  background: $dark3-c;
+  background: $veryDarkToWhite;
   padding: size(60) size(15) size(120);
 
   &__wrapper {
@@ -502,7 +517,7 @@
   }
 
   .brands {
-    background: $dark3-c;
+    background: $veryDarkToWhite;
     padding: size(25) size(15) size(50);
 
     &__wrapper {

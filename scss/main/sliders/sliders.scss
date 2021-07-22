@@ -1,6 +1,7 @@
 .clients {
-  color: $white-c;
+  color: $alwaysWhite;
   padding: 0 size(15);
+  background: $darkToPink;
 
   &__cards {
     position: relative;
@@ -14,6 +15,14 @@
     text-align: center;
     margin-bottom: size(60);
   }
+
+  &__pretitle {
+    color: $lightGrayToWhite;
+  }
+
+  &__title {
+    color: $dark2ToWhite;
+  }
 }
 
 .active-slider {
@@ -21,7 +30,7 @@
   position: absolute;
   width: size(49);
   height: size(15);
-  background: $primary-c;
+  background: $alwaysBlack;
   border-radius: size(7.5);
   left: 50%;
   transform: translateX(-50%);
@@ -107,7 +116,7 @@
       width: size(15);
       height: size(15);
       border-radius: 50%;
-      background: $grey-c;
+      background: $alwaysGray;
     }
 
     & > li {
@@ -145,7 +154,7 @@
   }
 
   100% {
-    background: $primary-c;
+    background: $alwaysBlack;
   }
 }
 

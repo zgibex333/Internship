@@ -1,0 +1,51 @@
+html {
+  --lightDark-white: #3a3b3c;
+  --dark-pink: #242526;
+  --dark2-white: #ffffff;
+  --dark-white: #242526;
+  --light-gray-white: #ffffff;
+  --clear-black-white: #ffffff;
+  --themeBtn: #ffffff;
+  --white-orange: #ffffff;
+  --veryDark-white: #18191a;
+  --orange-black: #ff5300;
+  --white-black: #ffffff;
+  --easyGray-pink: #3a3b3c;
+  --whiteToOrange: #ffffff;
+  --always-white: #ffffff;
+  --always-gray: #7b7b7b;
+  --always-black: #373737;
+  --always-dark-light: #3a3b3c;
+  --accent: #ff5300;
+  --blue: #00acff;
+  --alwaysDarken: #242526;
+}
+
+html[data-theme="light"] {
+  --lightDark-white: #ffffff;
+  --dark-pink: #fff7f4;
+  --dark2-white: #373737;
+  --dark-white: #ffffff;
+  --light-gray-white: #7b7b7b;
+  --clear-black-white: #000000;
+  --orange-black: #0d1c2e;
+  --white-orange: #ff5300;
+  --veryDark-white: #ffffff;
+  --white-black: #0d1c2e;
+  --easyGray-pink: #fff7f4;
+  --whiteToOrange: #ff5300;
+  --always-white: #ffffff;
+  --always-gray: #7b7b7b;
+  --always-black: #373737;
+  --always-dark-light: #3a3b3c;
+  --accent: #ff5300;
+  --blue: #00acff;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms;
+  transition-delay: 0;
+}

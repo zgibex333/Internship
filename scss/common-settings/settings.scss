@@ -12,7 +12,7 @@
 
 .cmn-button {
   display: block;
-  color: $white-c;
+  color: $alwaysWhite;
   width: size(150);
   height: size(50);
   font-size: $navSize;
@@ -22,7 +22,7 @@
   text-align: center;
   line-height: size(50);
   cursor: pointer;
-  @include linksColor($white-c, $white-c);
+  @include linksColor($alwaysWhite, $alwaysWhite);
 
   &:hover {
     box-shadow: 0 size(1) size(10) $accent-c;
