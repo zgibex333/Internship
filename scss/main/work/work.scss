@@ -1,7 +1,7 @@
 .work {
-  color: $white-c;
+  color: $alwaysWhite;
   padding: 0 size(15);
-  background: $dark3-c;
+  background: $veryDarkToWhite;
   padding-bottom: size(120);
 
   .new__lines {
@@ -15,6 +15,11 @@
   &__title {
     max-width: size(650);
     margin: 0 auto size(25);
+    color: $dark2ToWhite; 
+  }
+
+  &__pretitle {
+    color: $lightGrayToWhite; 
   }
 
   &__tabs {
@@ -29,6 +34,10 @@
     align-items: center;
     gap: size(5);
     min-width: size(550);
+
+    a {
+      @include linksColor($alwaysGray, $accent-c);
+    }
   }
 
   &__projects {
@@ -58,7 +67,7 @@
     &:hover {
       &::after {
         position: absolute;
-        content: url("../../../assets/work/search.svg");
+        content: url("../assets/work/search.svg");
         top: 70%;
         left: 50%;
         transform: translate(-70%, -50%);

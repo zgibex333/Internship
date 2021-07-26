@@ -1,10 +1,10 @@
 body {
   position: relative;
-  background: $dark2-c;
+  background: $darkToPink;
 }
 
 .hero {
-  color: $white-c;
+  color: $alwaysWhite;
   padding: 0 size(15) 0;
 
   &__socials {
@@ -21,18 +21,22 @@ body {
       cursor: pointer;
       width: size(40);
       height: size(40);
-      background: $dark1-c;
+      background: $lightDarkToWhite;
       display: flex;
       justify-content: center;
       align-items: center;
 
       svg {
-        fill: $white-c;
+        fill: $whiteToOrange;
       }
 
       &:hover {
         background: $accent-c;
         box-shadow: size(4) size(5) size(15) rgba(255, 83, 0, 0.4);
+
+        svg {
+          fill: $alwaysWhite;
+        }
       }
     }
   }
@@ -52,9 +56,11 @@ body {
     font-weight: 700;
     font-size: $headingMain;
     line-height: size(59);
+    color: $dark2ToWhite; 
   }
 
   .hero-text {
+    color: $lightGrayToWhite; 
     margin: size(25) 0 size(50);
   }
 }
