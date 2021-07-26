@@ -50,7 +50,7 @@ body {
   height: size(48);
   margin: 0 size(10) 0 size(5);
   position: relative;
-  background: url("../../assets/header/logo.svg") bottom / contain no-repeat;
+  background: url("../assets/header/logo.svg") bottom / contain no-repeat;
 }
 
 .menu__nav {
@@ -110,7 +110,7 @@ body {
     height: size(25);
     margin-right: size(15);
     position: relative;
-    background: url("../../assets/header/logo.svg") center / contain no-repeat;
+    background: url("../assets/header/logo.svg") center / contain no-repeat;
   }
 
   .menu__nav {
@@ -172,7 +172,7 @@ body {
     min-width: size(102);
     height: size(31);
     position: relative;
-    background: url("../../assets/header/logo-mobile.svg") bottom / contain
+    background: url("../assets/header/logo-mobile.svg") bottom / contain
       no-repeat;
   }
 

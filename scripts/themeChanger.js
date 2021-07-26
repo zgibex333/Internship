@@ -37,12 +37,20 @@ function changeIcons() {
     let trigger = document.documentElement.getAttribute('data-theme');
     let sort = document.querySelector('#sort');
     if (trigger === 'light') {
-        logo.style.background = 'url(../assets/header/logo_dark.svg) bottom / contain no-repeat';
+        if (document.title === "Digiency") {
+            logo.style.background = 'url(./assets/header/logo_dark.svg) bottom / contain no-repeat';
+        } else {
+            logo.style.background = 'url(../assets/header/logo_dark.svg) bottom / contain no-repeat';
+        }
         if (sort) {
             sort.style.background = 'url(../assets/article/dark-arrowdownn.svg) no-repeat right';
         }
     } else {
-        logo.style.background = 'url(../../assets/header/logo.svg) bottom / contain no-repeat';
+        if (document.title === "Digiency") {
+            logo.style.background = 'url(./assets/header/logo.svg) bottom / contain no-repeat';
+        } else {
+            logo.style.background = 'url(../assets/header/logo.svg) bottom / contain no-repeat';
+        }
         if (sort) {
             sort.style.background = 'url(../assets/article/arrowdownn.svg) no-repeat right';
         }
