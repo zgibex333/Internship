@@ -659,6 +659,27 @@ html.transition *:after {
   margin: 0 auto;
 }
 
+.b_active {
+  overflow: hidden;
+}
+
+.arrow-to-start {
+  position: fixed;
+  right: 3.125rem;
+  bottom: 3.125rem;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+}
+.arrow-to-start svg {
+  fill: var(--whiteToOrange);
+}
+
+.arrow-visible {
+  opacity: 100%;
+  cursor: pointer;
+}
+
 body {
   position: relative;
   font-family: "Work Sans", sans-serif;
@@ -688,7 +709,9 @@ body ul {
 .header {
   padding: 1.625rem 0.9375rem;
   width: 100%;
-  position: absolute;
+  position: sticky;
+  top: 0;
+  left: 0;
   background: var(--lightDark-white);
   overflow: hidden;
   font-size: 1.25rem;
@@ -702,16 +725,36 @@ body ul {
   align-items: center;
 }
 
+.menu-field {
+  width: 100%;
+  height: 2.5rem;
+  background: var(--lightDark-white);
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: -20%;
+  transition: 1s;
+}
+.menu-field_active {
+  transform: scale(200);
+  top: 0;
+}
+
 .burger {
   display: none;
 }
 
 .menu__logo {
   min-width: 10.125rem;
+  max-width: 10.125rem;
   height: 3rem;
   margin: 0 0.625rem 0 0.3125rem;
   position: relative;
-  background: url("../assets/header/logo.svg") bottom/contain no-repeat;
+}
+.menu__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .menu__nav {
@@ -746,6 +789,11 @@ body ul {
 }
 .menu__button svg:hover path {
   fill: var(--accent);
+}
+
+.field__list {
+  font-size: 0;
+  transition: 0.5s;
 }
 
 @media (max-width: 48rem) {
@@ -783,6 +831,10 @@ body ul {
   }
 }
 @media (max-width: 45rem) {
+  .arrow-to-start {
+    display: none;
+  }
+
   .menu__logo {
     min-width: 6.25rem;
   }
@@ -811,6 +863,45 @@ body ul {
   .burger__line {
     height: 0.125rem;
     background: var(--dark2-white);
+    transition: 0.1s;
+  }
+
+  .burger_active {
+    position: relative;
+    z-index: 999;
+  }
+  .burger_active .burger__line:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    background: var(--dark2-white);
+  }
+  .burger_active .burger__line:nth-child(2) {
+    height: 0;
+  }
+  .burger_active .burger__line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    width: 100%;
+    bottom: 50%;
+    background: var(--dark2-white);
+  }
+
+  .field__active {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    height: 60vh;
+    width: 60vw;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.953125rem;
   }
 }
 @media (max-width: 23.5rem) {
