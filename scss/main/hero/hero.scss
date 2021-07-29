@@ -42,7 +42,7 @@ body {
   }
 
   &__wrapper {
-    padding: size(253) 0 size(153);
+    padding: size(153) 0;
     display: flex;
     justify-content: space-between;
   }
@@ -56,11 +56,11 @@ body {
     font-weight: 700;
     font-size: $headingMain;
     line-height: size(59);
-    color: $dark2ToWhite; 
+    color: $dark2ToWhite;
   }
 
   .hero-text {
-    color: $lightGrayToWhite; 
+    color: $lightGrayToWhite;
     margin: size(25) 0 size(50);
   }
 }
@@ -88,7 +88,7 @@ body {
     }
 
     &__wrapper {
-      padding: size(153) 0 size(73);
+      padding: size(73) 0;
       flex-wrap: wrap-reverse;
     }
   }
@@ -129,7 +129,7 @@ body {
     }
 
     &__wrapper {
-      padding: size(100) 0 size(50);
+      padding: size(50) 0;
     }
   }
 

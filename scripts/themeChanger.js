@@ -38,18 +38,18 @@ function changeIcons() {
     let sort = document.querySelector('#sort');
     if (trigger === 'light') {
         if (document.title === "Digiency") {
-            logo.style.background = 'url(./assets/header/logo_dark.svg) bottom / contain no-repeat';
+            logo.innerHTML = '<img src="./assets/header/logo_dark.svg" alt="" />';
         } else {
-            logo.style.background = 'url(../assets/header/logo_dark.svg) bottom / contain no-repeat';
+            logo.innerHTML = '<img src="../assets/header/logo_dark.svg" alt="" />';
         }
         if (sort) {
             sort.style.background = 'url(../assets/article/dark-arrowdownn.svg) no-repeat right';
         }
     } else {
         if (document.title === "Digiency") {
-            logo.style.background = 'url(./assets/header/logo.svg) bottom / contain no-repeat';
+            logo.innerHTML = '<img src="./assets/header/logo.svg" alt="" />';
         } else {
-            logo.style.background = 'url(../assets/header/logo.svg) bottom / contain no-repeat';
+            logo.innerHTML = '<img src="../assets/header/logo.svg" alt="" />';
         }
         if (sort) {
             sort.style.background = 'url(../assets/article/arrowdownn.svg) no-repeat right';
