@@ -9,7 +9,6 @@
 .first-digit {
   font-size: $headingMain;
   font-weight: 700;
-  line-height: size(59);
   color: $dark2ToWhite;
 }
 
@@ -352,7 +351,7 @@
 
   .article {
     &__wrapper {
-      padding: size(172) 0 size(72);
+      padding: size(60) 0;
     }
 
     &__undertitle {
@@ -470,7 +469,7 @@
 
   .article {
     &__wrapper {
-      padding: size(92) 0 size(41);
+      padding: size(42) 0;
     }
 
     &__undertitle {

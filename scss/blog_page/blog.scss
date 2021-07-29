@@ -3,7 +3,7 @@
   background: $darkToPink;
 
   &__wrapper {
-    padding: size(207) 0 size(108);
+    padding: size(108) 0;
     text-align: center;
     color: $dark2ToWhite;
   }
@@ -316,7 +316,7 @@
 @media (max-width: $tablet) {
   .heading {
     &__wrapper {
-      padding: size(139) 0 size(102);
+      padding: size(60) 0;
     }
   }
 
@@ -540,7 +540,7 @@
 @media (max-width: $mobile) {
   .heading {
     &__wrapper {
-      padding: size(110) 0 size(59);
+      padding: size(60) 0;
     }
 
     &__title {
